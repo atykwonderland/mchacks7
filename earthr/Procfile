@@ -1,0 +1,1 @@
+web: gunicorn earthr:app --log-file=-

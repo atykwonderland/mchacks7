@@ -11,15 +11,15 @@ def home():
 def getAllFoods():
     data = col.find()
     response = []
-    for data in documents:
+    for d in data:
         if (data["carbon-footprint_100g"] != ""):
             dic = dict()
-            dic["product_name"]= str(data["product_name"])
-            dic["generic_name"] = str(data["generic_name"])
-            dic["quantity"] = str( data["quantity"])
-            dic["serving_size"] = str(data["serving_size"])
-            dic["packaging"] = str(data["packaging"])
-            dic["carbon-footprint_100g"] = int(data["carbon-footprint_100g"])
+            dic["product_name"]= str(d["product_name"])
+            dic["generic_name"] = str(d["generic_name"])
+            dic["quantity"] = str( d["quantity"])
+            dic["serving_size"] = str(d["serving_size"])
+            dic["packaging"] = str(d["packaging"])
+            dic["carbon-footprint_100g"] = int(d["carbon-footprint_100g"])
             response.append(dic)
     return json.dumps(response)
     

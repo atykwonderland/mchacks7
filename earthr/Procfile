@@ -1,1 +1,1 @@
-web: gunicorn earthr:app --log-file=-
+web: gunicorn hello:app

@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return 'hi'
+    return 'hi', 200
 
 @app.route('/foods',methods=['GET'])
 def getAllFoods():
@@ -21,7 +21,7 @@ def getAllFoods():
             dic["packaging"] = str(d["packaging"])
             dic["carbon-footprint_100g"] = int(d["carbon-footprint_100g"])
             response.append(dic)
-    return json.dumps(response).encode('utf-8')
+    return json.dumps(response).encode('utf-8'), 200
     
 
 if __name__ == '__main__':

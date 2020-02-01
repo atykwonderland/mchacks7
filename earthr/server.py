@@ -12,7 +12,7 @@ def getAllFoods():
     data = col.find()
     response = []
     for d in data:
-        if (data["carbon-footprint_100g"] != ""):
+        if (d["carbon-footprint_100g"] != ""):
             dic = dict()
             dic["product_name"]= str(d["product_name"])
             dic["generic_name"] = str(d["generic_name"])

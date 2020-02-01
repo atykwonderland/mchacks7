@@ -21,7 +21,7 @@ def getAllFoods():
             dic["packaging"] = str(d["packaging"])
             dic["carbon-footprint_100g"] = int(d["carbon-footprint_100g"])
             response.append(dic)
-    return json.dumps(response)
+    return json.dumps(response).encode('utf-8')
     
 
 if __name__ == '__main__':

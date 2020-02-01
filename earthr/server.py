@@ -14,8 +14,8 @@ def getAllFoods():
     for d in data:
         if (d["carbon-footprint_100g"] != ""):
             dic = dict()
-            dic["product_name"]= str(d["product_name"])
-            dic["generic_name"] = str(d["generic_name"])
+            dic["product_name"]= str(d["product_name"],encoding='utf-8')
+            dic["generic_name"] = str(d["generic_name"],encoding='utf-8')
             dic["quantity"] = str( d["quantity"])
             dic["serving_size"] = str(d["serving_size"])
             dic["packaging"] = str(d["packaging"])
